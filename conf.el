@@ -39,8 +39,10 @@
 (setq linum-format "%4d ")
 (delete-selection-mode 1)
 (global-auto-revert-mode t)
-(use-package undo-tree
-  :init (global-undo-tree-mode))
+;; (use-package undo-tree
+;;   :init (global-undo-tree-mode))
+
+
 (add-hook 'before-save-hook
 	  'delete-trailing-whitespace)
 (add-hook 'prog-mode-hook
@@ -139,6 +141,11 @@
 :config
 
 )
+(use-package cmake-mode
+             :ensure t
+             :config
+
+             )
 (use-package password-generator
              :ensure t
              :config
